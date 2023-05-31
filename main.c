@@ -24,12 +24,12 @@ int main(void){
 
     while(1){
         gpio_put(LED_PIN, 1);
-        gpio_put(1, 1);
-        //gpio_put_all(0x0000000F);
+//        gpio_put(1, 1);
+        gpio_put_all(0x0000000F);
         sleep_ms(200);
         gpio_put(LED_PIN, 0);
-        gpio_put(1, 0);
-        //gpio_put_all(0x00000000);
+//        gpio_put(1, 0);
+        gpio_put_all(0x00000000);
         sleep_ms(200);
     }
 }
