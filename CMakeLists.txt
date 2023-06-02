@@ -13,5 +13,7 @@ add_executable(mosfet_drive
 
 pico_add_extra_outputs(mosfet_drive)
 
-target_link_libraries(mosfet_drive pico_stdlib)
+target_include_directories(mosfet_drive INTERFACE ./)
+
+target_link_libraries(mosfet_drive pico_stdlib hardware_pwm)
 
