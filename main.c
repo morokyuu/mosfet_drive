@@ -12,6 +12,10 @@ void init(void){
     uint slice_num = pwm_gpio_to_slice_num(PWM_PORT);
     gpio_set_function(PWM_PORT,GPIO_FUNC_PWM);
 
+    //gpio_set_slew_rate(PWM_PORT,GPIO_SLEW_RATE_FAST);
+    //gpio_set_slew_rate(PWM_PORT,GPIO_SLEW_RATE_SLOW);
+    gpio_set_drive_strength(PWM_PORT,GPIO_DRIVE_STRENGTH_12MA);
+
     pwm_config config;
     pwm_config_set_phase_correct(&config, false);
     pwm_config_set_clkdiv_int(&config, 2);
